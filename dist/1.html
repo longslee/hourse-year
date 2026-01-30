@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>马年吉祥</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "微软雅黑", sans-serif;
+            background: linear-gradient(120deg, #f6d365, #fda085);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-size: 36px;
+            color: #d9534f;
+            margin-bottom: 20px;
+            animation: shake 2s infinite;
+        }
+        .subtitle {
+            font-size: 20px;
+            color: #5bc0de;
+            margin-bottom: 30px;
+        }
+        .horse-img {
+            width: 200px;
+            height: 200px;
+            margin: 20px 0;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .blessing {
+            font-size: 24px;
+            color: #333;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🐴 马年吉祥 🐴</h1>
+        <p class="subtitle">龙马精神 · 马到成功</p>
+        <img src="https://picsum.photos/seed/horse2026/200/200" alt="马年图片" class="horse-img">
+        <div class="blessing">
+            祝您马年行大运<br>
+            财运亨通，万事顺遂<br>
+            策马奔腾，前程似锦
+        </div>
+    </div>
+
+    <script>
+        // 动态修改祝福语（可选）
+        window.onload = function() {
+            const blessings = [
+                "马年吉祥，阖家幸福！",
+                "一马当先，万事如意！",
+                "金马送福，岁岁平安！",
+                "策马扬鞭，再创辉煌！"
+            ];
+            // 随机切换祝福语
+            const randomBlessing = blessings[Math.floor(Math.random() * blessings.length)];
+            document.querySelector('.blessing').innerHTML = randomBlessing;
+        }
+    </script>
+</body>
+</html>
